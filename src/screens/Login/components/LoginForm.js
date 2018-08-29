@@ -2,6 +2,7 @@ import * as React from "react";
 import axios from "axios";
 import {updateToken} from "../../../common/utils/token";
 import {withRouter} from "react-router-dom";
+import {backendUrlFor} from "../../../app.constants";
 
 
 class LoginForm extends React.Component {
@@ -19,7 +20,7 @@ class LoginForm extends React.Component {
     // password: qwerty1234
 
     submitForm() {
-        axios.post('http://localhost:8000/api/auth/login/', {}, {
+        axios.post(backendUrlFor('login'), {}, {
             auth: {
                 username: this.state.username,
                 password: this.state.password

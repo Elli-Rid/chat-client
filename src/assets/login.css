@@ -103,13 +103,14 @@
     color: #EF3B3A;
 }
 
-body {
-    background: #88bdbc; /* fallback for old browsers */
-    background: -webkit-linear-gradient(right, #88bdbc, #88bdbc);
-    background: -moz-linear-gradient(right, #88bdbc, #88bdbc);
-    background: -o-linear-gradient(right, #88bdbc, #88bdbc);
-    background: linear-gradient(to left, #88bdbc, #88bdbc);
-    font-family: "Roboto", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+/* TODO: Add styles like on telegram /
+/*body {*/
+    /*background: #88bdbc; !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(right, #88bdbc, #88bdbc);*/
+    /*background: -moz-linear-gradient(right, #88bdbc, #88bdbc);*/
+    /*background: -o-linear-gradient(right, #88bdbc, #88bdbc);*/
+    /*background: linear-gradient(to left, #88bdbc, #88bdbc);*/
+    /*font-family: "Roboto", sans-serif;*/
+    /*-webkit-font-smoothing: antialiased;*/
+    /*-moz-osx-font-smoothing: grayscale;*/
+/*}*/

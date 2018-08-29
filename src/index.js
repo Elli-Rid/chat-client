@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/index.css';
+import 'react-chat-elements/dist/main.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 

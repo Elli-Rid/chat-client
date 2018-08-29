@@ -3,7 +3,7 @@ import {Route, Redirect} from 'react-router-dom';
 import {isAuthenticate} from "../utils/auth";
 
 
-const LoggedInRoute = ({ component: Component, ...rest }) => (
+const UnauthorizedOnlyRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} render={(props) => (
         isAuthenticate() !== true
             ? <Component {...props} />
@@ -11,4 +11,4 @@ const LoggedInRoute = ({ component: Component, ...rest }) => (
     )} />
 );
 
-export default LoggedInRoute
+export default UnauthorizedOnlyRoute

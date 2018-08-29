@@ -8,7 +8,7 @@ import history from './common/utils/history';
 import reducer from "./screens/reducer";
 import {createStore} from "redux";
 import PrivateRoute from "./common/components/PrivateRoute";
-import LoggedInRoute from "./common/components/LoggedInRoute";
+import UnauthorizedOnlyRoute from "./common/components/UnauthorizedOnlyRoute";
 
 let store = createStore(reducer);
 
@@ -18,7 +18,7 @@ const App = () => (
         <Router history={history}>
             <Switch>
                 <PrivateRoute path="/" exact component={ChatClient}/>
-                <Route path="/login" component={Login}/>
+                <UnauthorizedOnlyRoute path="/login" component={Login}/>
                 <Route component={NotFound}/>
             </Switch>
         </Router>

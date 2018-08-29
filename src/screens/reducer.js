@@ -1,7 +1,9 @@
 import {combineReducers} from "redux"
-import {routerReducer} from "react-router-redux";
+import chatsReducer from "./ChatClient/reducers/chatsReducer";
+import messagesReducer from "./ChatClient/reducers/messagesReducer";
 
 
 export default combineReducers({
-    routing: routerReducer,
+    chats: chatsReducer,
+    messages: messagesReducer
 });
