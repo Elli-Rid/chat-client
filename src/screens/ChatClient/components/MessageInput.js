@@ -12,7 +12,7 @@ class MessageInput extends React.Component {
 
     _sendMessage = () => {
         if (this.inputValue.state.value.length > 0) {
-            this.props.dispatch(this.inputValue.state.value, 1);
+            this.props.dispatch(this.inputValue.state.value, (Math.random() > 0.5) ? 1 : 0);  // TODO: Change after ws
             this.inputValue.clear();
         }
     };
@@ -26,8 +26,6 @@ class MessageInput extends React.Component {
                 onKeyPress={this._keyPress}
                 rightButtons={
                     <Button
-                        color='white'
-                        backgroundColor='black'
                         text='Send'
                         onClick={this._sendMessage}
                     />
@@ -51,7 +49,7 @@ class MessageInput extends React.Component {
 
 const mapDispatchToProps = dispatch => ({
     dispatch: (message, chatId) => {
-        dispatch(sendMessage(message, chatId))
+        dispatch(sendMessage(message, chatId)) // TODO: Change after ws
     }
 });
 
